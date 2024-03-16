@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vkusnutso</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:wght@300;400;500;600;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+
+<body>
+
+
+    <div class="wrapper">
+
+        <header class="header">
+
+            <div class="container">
+                <section class="header__inner">
+                    <a class="header__inn" href="index.html">
+                        <h3 class="header__title">Вкуснутсо</h3>
+                    </a>
+
+                    <button class="header__button">
+                        <span class="header__button-add">+</span>
+                        <span class="header__button-addmax">Добавить рецепт</span>
+                        <span class="header__button-addmin">рецепт</span>
+                    </button>
+
+                    <div class="form-cart form-cart--close">
+                        <button class="form-cart__close">
+                            <img class="form-cart__close-img" src="img/close.svg" alt="close-img">
+                        </button>
+                    
+                        <div class="form-cart__content">
+                            <h4 class="form-cart__title">Присылайте нам свои рецепты!</h4>
+                            <form class="form-cart__category" action="">
+                                <h1 class="form-cart__category-title form-title">Выберите категорию рецепта</h1>
+                                <select class="form-cart__category-items form-input">
+                                    <option class="form-cart__category-item">Завтраки</option>
+                                    <option class="form-cart__category-item">Обеды</option>
+                                    <option class="form-cart__category-item">Ужины</option>
+                                    <option class="form-cart__category-item">Салаты</option>
+                                    <option class="form-cart__category-item">Выпечка</option>
+                                    <option class="form-cart__category-item">Десерты</option>
+                                    <option class="form-cart__category-item">Закуски</option>
+                                    <option class="form-cart__category-item">Соусы</option>
+                                    <option class="form-cart__category-item">Напитки</option>
+                                </select>
+                            </form>
+                            <form class="form-cart__name" action="">
+                                <h1 class="form-cart__name-title form-title">Название рецепта</h1>
+                                <input class="form-cart__name-input form-input" type="text" placeholder="Введите наименование рецепта">
+                            </form>
+                            <form class="form-cart__description" action="">
+                                <h1 class="form-cart__description-title form-title">Описание рецепта</h1>
+                                <textarea class="form-cart__description-input form-input" type="text" placeholder="Введите описание рецепта"></textarea>
+                            </form>                                                       
+                            <form class="form-cart__media" action="">
+                                <h1 class="form-cart__media-title form-title">Прикрепите видео и фотографии</h1>
+                                <input class="form-cart__media-file form-input" type="file" multiple accept="image/*,video/*">
+                            </form>
+                            <form class="form-cart__values" action="">
+                                <h1 class="form-cart__values-title form-title">Эннергетическая ценность</h1>
+                                <div class="form-cart__value-block">
+                                    
+                                    <div class="form-cart__value">
+                                        <p class="form-cart__value-title">белки, гр</p>
+                                        <input class="form-cart__value-num" type="number" value="0"></input>
+                                    </div>
+                                    <div class="form-cart__value">
+                                        <p class="form-cart__value-title">жиры, гр</p>
+                                        <input class="form-cart__value-num" type="number" value="0"></input>
+                                    </div>
+                                    <div class="form-cart__value">
+                                        <p class="form-cart__value-title">углеводы, гр</p>
+                                        <input class="form-cart__value-num" type="number" value="0"></input>
+                                    </div>
+                                    <div class="form-cart__value">
+                                        <p class="form-cart__value-title">калорийность, ккал</p>
+                                        <input class="form-cart__value-num" type="number" value="0"></input>
+                                    </div>
+                                </div>
+                            </form>
+                            <form class="form-cart__ingredients" action="">
+                                <h1 class="form-cart__ingredients-title form-title">Ингредиенты</h1>
+                                <textarea class="form-cart__ingredients-text form-input" type="text"
+                                    placeholder="Укажите ингредиенты и их вес"></textarea>
+                            </form>
+                            
+                            <form class="form-cart__content" action="">
+                                <h1 class="form-cart__content-title form-title">Порядок приготовления</h1>
+                                <textarea class="form-cart__content-text form-input" type="text" placeholder="Опишите пошаговое приготовление вашего рецепта"></textarea>
+                            </form>
+                            <form class="form-cart__time" action="">
+                                <h1 class="form-cart__time-title form-title">Укажите время приготовления в минутах</h1>
+                                <input class="form-cart__time-timing" type="number" value="0">
+                            </form>
+                                                       
+                            <button class="form-cart__btn">Отправить</button>
+                        </div>
+                    </div>
+
+                    <form class="header__search">
+                        <input class="header__search-input" type="text" placeholder="Поиск">
+                        <button class="header__search-btn" type="submit">
+                            <img src="img/search-icon.svg" alt="search-icon">
+                        </button>
+                    </form>
+                </section>
+            </div>
+        </header>
+
+
+        <main class="main">
+            <div class="container">
+                <div class="main__inner">
+
+                    <div class="content">
+                        <nav class="navigation">
+                            <div class="navigation__carousel">
+                                <div class="navigation__items">
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#" >
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/breakfast.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Завтраки</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/lunch.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Обеды</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/dinner.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Ужины</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/salads.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Салаты</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/bakery.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Выпечка</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/desserts.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Десерты</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/snaks.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Закуски</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/sauces.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Соусы</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/drinks.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Напитки</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </nav>
+
+                        <section class="group">
+                            <h2 class="group__title">Завтраки</h2>
+
+                            <div class="group__inner">
+                                <a class="group__inner-link" href="#">
+                                    <img class="group__inner-img" src="img/breakfasts/1.jpg" alt="image">
+                                    <div class="group__inner-details">
+                                        <h6 class="group__inner-title">Скрэмбл</h6>
+                                        <p class="group__inner-text">Одно из самых популярных блюд, которое подают на
+                                            завтрак в европейских отелях. Яичница-болтунья, но приготовленная по
+                                            особому, что придает этому блюду очень нежную структуру. Готовится легко и
+                                            быстро.</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="group__inner">
+                                <a class="group__inner-link" href="#">
+                                    <img class="group__inner-img" src="img/breakfasts/2.jpg" alt="image">
+                                    <div class="group__inner-details">
+                                        <h6 class="group__inner-title">Горячие бутерброды</h6>
+                                        <p class="group__inner-text">Рецепт вкуснейших бутербродов с ветчиной и
+                                            колбасным сыром, которые можно быстро приготовить на завтрак. Побалуйте
+                                            своих домочадцев - я думаю, они по достоинству оценят такие горячие
+                                            бутерброды, вам же не составит никакого труда их приготовить!</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="group__inner">
+                                <a class="group__inner-link" href="#">
+                                    <img class="group__inner-img" src="img/breakfasts/3.jpg" alt="image">
+                                    <div class="group__inner-details">
+                                        <h6 class="group__inner-title">Быстрая пицца</h6>
+                                        <p class="group__inner-text">Самая быстрая из всевозможных рецептов пиццы –
+                                            пицца, приготовленная за 35 минут на сковороде. Наполнение для пиццы может
+                                            быть любым на ваш вкус.</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="group__inner">
+                                <a class="group__inner-link" href="#">
+                                    <img class="group__inner-img" src="img/breakfasts/4.jpg" alt="image">
+                                    <div class="group__inner-details">
+                                        <h6 class="group__inner-title">Сырники</h6>
+                                        <p class="group__inner-text">Сырники - одно из самых популярных блюд из творога.
+                                            Предлагаю приготовить сырники на сковороде, с минимальным количеством муки.
+                                            Сырники получаются пышными, нежными и вкусными.</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="group__inner">
+                                <a class="group__inner-link" href="#">
+                                    <img class="group__inner-img" src="img/breakfasts/5.jpg" alt="image">
+                                    <div class="group__inner-details">
+                                        <h6 class="group__inner-title">Блинчики</h6>
+                                        <p class="group__inner-text">Простой, оригинальный и очень вкусный рецепт блинов. Благодаря тому, что в состав теста для блинов входит кефир и
+                                        молоко, блинчики получаются очень тонкими и пористыми (кружевными).</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </section>
+
+
+                        <div class="pagination">
+                            <span class="pagination__current">1</span>
+                            <a class="pagination__list" href="#">2</a>
+                            <span class="pagination__next">...</span>
+                            <a class="pagination__list" href="#">5</a>
+                        </div>
+
+                    </div>
+
+                    <div class="sidebar">
+                        <div class="survey">
+                            <h1 class="survey__descr">Опрос</h1>
+                            <div class="survey__title">Как часто вы едите мясо?</div>
+                            <div class="survey__lables">
+
+                                <label class="survey__label">Каждый день на обед и ужин
+                                    <input class="survey__item" type="radio" name="dva">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="survey__label">Каждый день на обед
+                                    <input class="survey__item" type="radio" name="dva">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="survey__label">Каждый день на ужин
+                                    <input class="survey__item" type="radio" name="dva" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="survey__label">3 раза в неделю
+                                    <input class="survey__item" type="radio" name="dva">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="survey__label">1 раз в неделю
+                                    <input class="survey__item" type="radio" name="dva">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="survey__label">Я не ем мясо
+                                    <input class="survey__item" type="radio" name="dva">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <button class="survey__btn btn">Ответить</button>
+                            </div>
+                        </div>
+
+                        <a class="promotion" href="#">
+                            <img class="promotion-img" src="img/promotion.gif" alt="img">
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__info">
+                            <h6 class="footer__info-title">Контакты</h6>
+                            <a class="info-email" href="mailto:ouremailaddress@email.com">ouremailaddress@email.com</a>
+                            <p class="footer__info-text">Подписывайтесь на рассылку рецептов</p>
+
+                            <form class="footer__form">
+                                <input class="footer__form-input" type="email" placeholder="Адрес электронной почты">
+                                <button class="footer__form-button btn" type="submit">Отправить</button>
+                            </form>
+                        </div>
+                        <ul class="footer__social-list">
+                            <li class="footer__social-item">
+                                <a class="footer__social-link footer__social-link--facebook" href="#">Facebook</a>
+                            </li>
+
+                            <li class="footer__social-item">
+                                <a class="footer__social-link footer__social-link--instagram" href="#">Instagram</a>
+                            </li>
+
+                            <li class="footer__social-item">
+                                <a class="footer__social-link footer__social-link--pinterest" href="#">Pinterest</a>
+                            </li>
+
+                            <li class="footer__social-item">
+                                <a class="footer__social-link footer__social-link--whatsapp" href="#">WhatsApp</a>
+                            </li>
+
+                            <li class="footer__social-item">
+                                <a class="footer__social-link footer__social-link--youtube" href="#">YouTube</a>
+                            </li>
+                        </ul>
+                        <nav class="footer__menu">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="#">Полезные советы</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="#">О компании</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="#">Пользовательское соглашение</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="#">FAQ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="container">
+                    <p>© ООО «Вкуснутсо», 2021. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="js/main.min.js"></script>
+</body>
+</html>

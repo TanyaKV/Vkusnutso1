@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vkusnutso</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:wght@300;400;500;600;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+
+<body>
+    
+<div class="wrapper">
+
+    <header class="header">
+
+        <div class="container">
+            <section class="header__inner">
+            <h3 class="header__title">Вкуснутсо</h3>
+
+            <form class="header__search">
+                <input class="header__search-input" type="text" placeholder="Поиск">
+                <button class="header__search-btn" type="submit">
+                    <img src="img/search-icon.svg" alt="search-icon">
+                </button>
+            </form>
+            </section>
+        </div>
+    </header>        
+
+
+    <main class="main">
+        <div class="container">
+            <div class="main__inner">
+                
+            <div class="content">
+
+                <section class="recipes">
+
+                    <h2 class="recipes__title">РЕЦЕПТЫ</h2>
+                    
+                    <div class="categories">
+                        
+                        <a class="categories__item" href="category.html">
+                            <img class="categories__image" src="img/categories/breakfast.jpg" alt="img">
+                            <p class="categories__name">Завтраки</p>
+                        </a>
+
+                        <a class="categories__item" href="#">
+                            <img class="categories__image" src="img/categories/lunch.jpg" alt="img">
+                            <p class="categories__name">Обеды</p>
+                        </a>
+
+                        <a class="categories__item" href="#">
+                            <img class="categories__image" src="img/categories/dinner.jpg" alt="img">
+                            <p class="categories__name">Ужины</p>
+                        </a>
+
+                        <a class="categories__item" href="#">
+                            <img class="categories__image" src="img/categories/salads.jpg" alt="img">
+                            <p class="categories__name">Салаты</p>
+                        </a>
+
+                        <a class="categories__item" href="#">
+                            <img class="categories__image" src="img/categories/bakery.jpg" alt="img">
+                            <p class="categories__name">Выпечка</p>
+                        </a>
+
+                        <a class="categories__item" href="#">
+                            <img class="categories__image" src="img/categories/desserts.jpg" alt="img">
+                            <p class="categories__name">Десерты</p>
+                        </a>
+
+                        <a class="categories__item" href="#">
+                            <img class="categories__image" src="img/categories/snaks.jpg" alt="img">
+                            <p class="categories__name">Закуски</p>
+                        </a>
+
+                        <a class="categories__item" href="#">
+                            <img class="categories__image" src="img/categories/sauces.jpg" alt="img">
+                            <p class="categories__name">Соусы</p>
+                        </a>
+
+                        <a class="categories__item" href="#">
+                            <img class="categories__image" src="img/categories/drinks.jpg" alt="img">
+                            <p class="categories__name">Напитки</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="sidebar">
+                <div class="survey">
+                    <h1 class="survey__descr">Опрос</h1>
+                    <div class="survey__title">Как часто вы едите мясо?</div>
+                    <div class="survey__lables">
+            
+                        <label class="survey__label">Каждый день на обед и ужин
+                            <input class="survey__item" type="radio" name="dva">
+                            <span class="checkmark"></span>
+                        </label>
+            
+                        <label class="survey__label">Каждый день на обед
+                            <input class="survey__item" type="radio" name="dva">
+                            <span class="checkmark"></span>
+                        </label>
+            
+                        <label class="survey__label">Каждый день на ужин
+                            <input class="survey__item" type="radio" name="dva">
+                            <span class="checkmark"></span>
+                        </label>
+            
+                        <label class="survey__label">3 раза в неделю
+                            <input class="survey__item" type="radio" name="dva">
+                            <span class="checkmark"></span>
+                        </label>
+            
+                        <label class="survey__label">1 раз в неделю
+                            <input class="survey__item" type="radio" name="dva" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+            
+                        <label class="survey__label">Я не ем мясо
+                            <input class="survey__item" type="radio" name="dva">
+                            <span class="checkmark"></span>
+                        </label>
+                        <button class="survey__btn btn">Ответить</button>
+                    </div>
+                </div>
+
+                <a class="promotion" href="#">
+                    <img class="promotion-img" src="img/promotion.gif" alt="img">
+                </a>
+            </div>
+
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__info">
+                        <h6 class="footer__info-title">Контакты</h6>
+                        <a class="info-email" href="mailto:ouremailaddress@email.com">ouremailaddress@email.com</a>
+                        <p class="footer__info-text">Подписывайтесь на рассылку рецептов</p>
+                        
+                        <form class="footer__form">
+                            <input class="footer__form-input" type="email" placeholder="Адрес электронной почты">
+                            <button class="footer__form-button btn" type="submit">Отправить</button>
+                        </form>
+                    </div>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item">
+                            <a class="footer__social-link footer__social-link--facebook" href="#">Facebook</a>
+                        </li>
+    
+                        <li class="footer__social-item">
+                            <a class="footer__social-link footer__social-link--instagram" href="#">Instagram</a>
+                        </li>
+    
+                        <li class="footer__social-item">
+                            <a class="footer__social-link footer__social-link--pinterest" href="#">Pinterest</a>
+                        </li>
+    
+                        <li class="footer__social-item">
+                            <a class="footer__social-link footer__social-link--whatsapp" href="#">WhatsApp</a>
+                        </li>
+    
+                        <li class="footer__social-item">
+                            <a class="footer__social-link footer__social-link--youtube" href="#">YouTube</a>
+                        </li>
+                    </ul>
+                    <nav class="footer__menu">
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a class="footer__menu-link" href="#">Полезные советы</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a class="footer__menu-link" href="#">О компании</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a class="footer__menu-link" href="#">Пользовательское соглашение</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a class="footer__menu-link" href="#">FAQ</a>
+                            </li>
+                        </ul>
+                    </nav>
+    
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="container">
+                <p>© ООО «Вкуснутсо», 2021. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+    <script src="js/main.min.js"></script>
+</body>
+</html>

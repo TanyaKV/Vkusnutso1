@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vkusnutso</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:wght@300;400;500;600;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+
+        <header class="header">
+
+            <div class="container">
+                <section class="header__inner">
+                    <a class="header__inn" href="index.html">
+                        <h3 class="header__title">Вкуснутсо</h3>
+                    </a>
+
+                    <button class="header__button">
+                        <span class="header__button-add">+</span>
+                        <span class="header__button-addmax">Добавить рецепт</span>
+                        <span class="header__button-addmin">рецепт</span>
+                    </button>
+                    
+                    <div class="form-cart form-cart--close">
+                        <button class="form-cart__close">
+                            <img class="form-cart__close-img" src="img/close.svg" alt="close-img">
+                        </button>
+                    
+                        <div class="form-cart__content">
+                            <h4 class="form-cart__title">Присылайте нам свои рецепты!</h4>
+                            <form class="form-cart__category" action="">
+                                <h1 class="form-cart__category-title form-title">Выберите категорию рецепта</h1>
+                                <select class="form-cart__category-items form-input">
+                                    <option class="form-cart__category-item">Завтраки</option>
+                                    <option class="form-cart__category-item">Обеды</option>
+                                    <option class="form-cart__category-item">Ужины</option>
+                                    <option class="form-cart__category-item">Салаты</option>
+                                    <option class="form-cart__category-item">Выпечка</option>
+                                    <option class="form-cart__category-item">Десерты</option>
+                                    <option class="form-cart__category-item">Закуски</option>
+                                    <option class="form-cart__category-item">Соусы</option>
+                                    <option class="form-cart__category-item">Напитки</option>
+                                </select>
+                            </form>
+                            <form class="form-cart__name" action="">
+                                <h1 class="form-cart__name-title form-title">Название рецепта</h1>
+                                <input class="form-cart__name-input form-input" type="text" placeholder="Введите наименование рецепта">
+                            </form>
+                            <form class="form-cart__description" action="">
+                                <h1 class="form-cart__description-title form-title">Описание рецепта</h1>
+                                <textarea class="form-cart__description-input form-input" type="text" placeholder="Введите описание рецепта"></textarea>
+                            </form>
+                            <form class="form-cart__media" action="">
+                                <h1 class="form-cart__media-title form-title">Прикрепите видео и фотографии</h1>
+                                <input class="form-cart__media-file form-input" type="file" multiple accept="image/*,video/*">
+                            </form>
+                            <form class="form-cart__values" action="">
+                                <h1 class="form-cart__values-title form-title">Эннергетическая ценность</h1>
+                                <div class="form-cart__value-block">
+                    
+                                    <div class="form-cart__value">
+                                        <p class="form-cart__value-title">белки, гр</p>
+                                        <input class="form-cart__value-num" type="number" value="0"></input>
+                                    </div>
+                                    <div class="form-cart__value">
+                                        <p class="form-cart__value-title">жиры, гр</p>
+                                        <input class="form-cart__value-num" type="number" value="0"></input>
+                                    </div>
+                                    <div class="form-cart__value">
+                                        <p class="form-cart__value-title">углеводы, гр</p>
+                                        <input class="form-cart__value-num" type="number" value="0"></input>
+                                    </div>
+                                    <div class="form-cart__value">
+                                        <p class="form-cart__value-title">калорийность, ккал</p>
+                                        <input class="form-cart__value-num" type="number" value="0"></input>
+                                    </div>
+                                </div>
+                            </form>
+                            <form class="form-cart__ingredients" action="">
+                                <h1 class="form-cart__ingredients-title form-title">Ингредиенты</h1>
+                                <textarea class="form-cart__ingredients-text form-input" type="text"
+                                    placeholder="Укажите ингредиенты и их вес"></textarea>
+                            </form>
+                    
+                            <form class="form-cart__content" action="">
+                                <h1 class="form-cart__content-title form-title">Порядок приготовления</h1>
+                                <textarea class="form-cart__content-text form-input" type="text"
+                                    placeholder="Опишите пошаговое приготовление вашего рецепта"></textarea>
+                            </form>
+                            <form class="form-cart__time" action="">
+                                <h1 class="form-cart__time-title form-title">Укажите время приготовления в минутах</h1>
+                                <input class="form-cart__time-timing" type="number" value="0">
+                            </form>
+                    
+                            <button class="form-cart__btn">Отправить</button>
+                        </div>
+                    
+                    </div>
+
+                    <form class="header__search">
+                        <input class="header__search-input" type="text" placeholder="Search">
+                        <button class="header__search-btn" type="submit">
+                            <img src="img/search-icon.svg" alt="search-icon">
+                        </button>
+                    </form>
+                </section>
+            </div>
+        </header>
+
+
+        <main class="main">
+            <div class="container">
+                <div class="main__inner">
+
+                    <div class="content">
+
+                        <nav class="navigation">
+                            <div class="navigation__carousel">
+                                <div class="navigation__items">
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#" >
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/breakfast.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Завтраки</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/lunch.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Обеды</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/dinner.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Ужины</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/salads.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Салаты</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/bakery.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Выпечка</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/desserts.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Десерты</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/snaks.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Закуски</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/sauces.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Соусы</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="navigation__item">
+                                        <a class="navigation__item-link" href="#">
+                                            <div class="navigation__item-img">
+                                                <img class="navigation__item-image" src="img/categories/drinks.jpg" alt="img">
+                                            </div>
+                                            <div class="navigation__item-text">Напитки</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </nav>
+
+                        <h1 class="recipe__title title">Быстрая пицца на сковороде</h1>
+
+                        <section class="recipe__gallery">
+
+                            <div class="recipe__video">
+                                <a class="recipe__video-link" href="https://www.youtube.com/watch?v=TNFhkbg1JH8">
+                                    <img class="recipe__video-img" src="img/popup.svg" alt="img">
+                                </a>
+                            </div>
+
+                            <div class="recipe__photo">
+                                <a class="recipe__photo-link" href="img/recipe/1.jpg"><img class="recipe__photo-img" src="img/recipe/1.jpg" alt="img"></a>
+                                <a class="recipe__photo-link" href="img/recipe/2.jpg"><img class="recipe__photo-img" src="img/recipe/2.jpg" alt="img"></a>
+                                <a class="recipe__photo-link" href="img/recipe/3.jpg"><img class="recipe__photo-img" src="img/recipe/3.jpg" alt="img"></a>
+                                <a class="recipe__photo-link" href="img/recipe/4.jpg"><img class="recipe__photo-img" src="img/recipe/4.jpg" alt="img"></a>
+                                <a class="recipe__photo-link" href="img/recipe/5.jpg"><img class="recipe__photo-img" src="img/recipe/5.jpg" alt="img"></a>
+                            </div> 
+                        </section>
+<!-- ЭНЕРГЕТИЧЕСКАЯ ЦЕННОСТЬ НА ПОРЦИЮ -->
+                        <div class="recipe__value">
+                            <h3 class="recipe__value-title">Энергетическая ценность на порцию</h3>
+
+                            <div class="recipe__value-items">
+                                <span class="recipe__value-itemname">Калорийность</span>
+                                <span class="recipe__value-itemname">Белки</span>
+                                <span class="recipe__value-itemname">Жиры</span>
+                                <span class="recipe__value-itemname">Углеводы</span>
+                            </div>
+
+                            <div class="recipe__value-items">
+                                <span class="recipe__value-itemdetail">233</span>
+                                <span class="recipe__value-itemdetail">10</span>
+                                <span class="recipe__value-itemdetail">14</span>
+                                <span class="recipe__value-itemdetail">14</span>
+                            </div>
+
+                            <div class="recipe__value-details">
+                                <span class="recipe__value-detailsval recipe__value-itemname">ккал</span>
+                                <span class="recipe__value-detailsval recipe__value-itemname">грамм</span>
+                                <span class="recipe__value-detailsval recipe__value-itemname">грамм</span>
+                                <span class="recipe__value-detailsval recipe__value-itemname">грамм</span>
+                            </div>
+                        </div>
+                        
+<!-- ИНГРЕДИЕНТЫ -->
+                        <div class="recipe__ingredients">
+                            <div class="recipe__ingredients-block">
+                                <h4 class="recipe__ingredients-title">Ингредиенты</h4>
+
+                                <div class="recipe__ingredients-portion">
+                                    <span class="recipe__ingredients-portiondet"> на 4 порции</span>
+                                </div>
+                            </div>
+
+                            <div class="recipe__ingredients-items">
+                                <div class="recipe__ingredients-itemspoint">Мука</div>
+                            
+                                <span class="recipe__ingredients-itemsline"></span>
+                                <span class="recipe__ingredients-itemsval">65 г</span>
+                            </div>
+                            <div class="recipe__ingredients-items">
+                                <div class="recipe__ingredients-itemspoint">Сметана</div>
+                            
+                                <span class="recipe__ingredients-itemsline"></span>
+                                <span class="recipe__ingredients-itemsval">75 г</span>
+                            </div>
+                            <div class="recipe__ingredients-items">
+                                <div class="recipe__ingredients-itemspoint">Яйца</div>
+                            
+                                <span class="recipe__ingredients-itemsline"></span>
+                                <span class="recipe__ingredients-itemsval">1 шт</span>
+                            </div>
+                            <div class="recipe__ingredients-items">
+                                <div class="recipe__ingredients-itemspoint">Разрыхлитель</div>
+                            
+                                <span class="recipe__ingredients-itemsline"></span>
+                                <span class="recipe__ingredients-itemsval">1.3 г</span>
+                            </div>
+                            <div class="recipe__ingredients-items">
+                                <div class="recipe__ingredients-itemspoint">Соль</div>
+                            
+                                <span class="recipe__ingredients-itemsline"></span>
+                                <span class="recipe__ingredients-itemsval">по вкусу</span>
+                            </div>
+                            <div class="recipe__ingredients-items">
+                                <div class="recipe__ingredients-itemspoint">Сосиски</div>
+                            
+                                <span class="recipe__ingredients-itemsline"></span>
+                                <span class="recipe__ingredients-itemsval">1 шт</span>
+                            </div>
+                            <div class="recipe__ingredients-items">
+                                <div class="recipe__ingredients-itemspoint">Сыр</div>
+                            
+                                <span class="recipe__ingredients-itemsline"></span>
+                                <span class="recipe__ingredients-itemsval">75 г</span>
+                            </div>
+                        </div>
+                    
+<!-- ПОШАГОВОЕ ПРИГОТОВЛЕНИЕ -->
+                        <section class="instruction">
+                        
+                            <div class="instruction__top">
+                                <h4 class="instruction__top-title">Пошаговое приготовление</h4>
+                                <span class="instruction__top-time">35 минут</span>
+                            </div>
+                        
+                            <ul class="instruction__items">
+                                <li class="instruction__item">
+                                    <h4 class="instruction__item-title">ШАГ 1:</h4>
+                                    <a class="instruction__item-link" href="#">
+                                        <img class="instruction__item-img" src="img/recipe/stepbystep/1.jpg" alt="img">
+                                    </a>
+                                    <p class="instruction__item-text">Как приготовить быструю пиццу на сковороде? Первым делом подготовьте тесто и продукты для пиццы. Из указанного
+                                    количества выйдут две тонкие пиццы диаметром 20 сантиметров. Сметану возьмите 20% жирности, яйца категории С1. Как сделать тесто? Возьмите большую миску, вбейте в нее яйца. Взбейте их миксером или венчиком до пышности и однородности.</p>
+                                </li>
+                            
+                                <li class="instruction__item">
+                                    <h4 class="instruction__item-title">ШАГ 2:</h4>
+                                    <a class="instruction__item-link" href="#">
+                                        <img class="instruction__item-img" src="img/recipe/stepbystep/2.jpg" alt="img">
+                                    </a>
+                                    <p class="instruction__item-text">Добавьте к яйцам соль, сметану, разрыхлитель и просеянную муку. Важно просеять муку, чтобы насытить ее кислородом. Тогда
+                                    выпечка получится воздушной и хорошо поднимется при выпекании. Будьте готовы к тому, что муки может потребоваться больше
+                                    или меньше, чем указано в рецепте. Ориентируйтесь не на количество муки, а на желаемую консистенцию теста.
+                                    </p>
+                                </li>
+                            
+                                <li class="instruction__item">
+                                    <h4 class="instruction__item-title">ШАГ 3:</h4>
+                                    <a class="instruction__item-link" href="#">
+                                        <img class="instruction__item-img" src="img/recipe/stepbystep/3.jpg" alt="img">
+                                    </a>
+                                    <p class="instruction__item-text">Перемешайте массу венчиком до однородности. Можете воспользоваться миксером, можете венчиком. Масса должна получиться
+                                    как на оладьи, то есть, довольно густоватой, а не жидкой. Оставьте тесто на 10 минут, за это время мука впитает всю
+                                    жидкость и тесто достигнет нужной консистенции. Если зачерпнуть тесто ложкой, то оно должно не стекать с нее, а медленно
+                                    спадать.
+                                    </p>
+                                </li>
+                            
+                                <li class="instruction__item">
+                                    <h4 class="instruction__item-title">ШАГ 4:</h4>
+                                    <a class="instruction__item-link" href="#">
+                                        <img class="instruction__item-img" src="img/recipe/stepbystep/4.jpg" alt="img">
+                                    </a>
+                                    <p class="instruction__item-text">Пока тесто настаивается, приготовьте начинку. Как сделать начинку? Сыр натрите на крупной терке, сосиски нарежьте
+                                    кружочками или овальными кусочками как на фото. Сыр для этого блюда подойдет любой — твердый, полутвердый, мягкий, типа
+                                    моцареллы. Главное, чтобы он был вкусным, качественным, без заменителей молочных жиров и хорошо плавился. Вместо сосисок
+                                    можете взять любые другие колбасные изделия.
+                                    </p>
+                                </li>
+                            
+                                <li class="instruction__item">
+                                    <h4 class="instruction__item-title">ШАГ 5:</h4>
+                                    <a class="instruction__item-link" href="#">
+                                        <img class="instruction__item-img" src="img/recipe/stepbystep/5.jpg" alt="img">
+                                    </a>
+                                    <p class="instruction__item-text">Разогрейте на сковороде растительное масло и слегка обжарьте сосиски с двух сторон на среднем огне. Этот шаг можно
+                                    пропустить, но мне с обжаренными сосисками пицца понравилась больше.
+                                    </p>
+                                </li>
+                            
+                                <li class="instruction__item">
+                                    <h4 class="instruction__item-title">ШАГ 6:</h4>
+                                    <a class="instruction__item-link" href="#">
+                                        <img class="instruction__item-img" src="img/recipe/stepbystep/6.jpg" alt="img">
+                                    </a>
+                                    <p class="instruction__item-text">Сковороду, на которой вы будете жарить пиццу, поставьте на медленный огонь и слегка смажьте растительным маслом без
+                                    запаха. Выложите на нее половину теста и равномерно распределите его с помощью деревянной лопаточки.
+                                    </p>
+                                </li>
+                            
+                                <li class="instruction__item">
+                                    <h4 class="instruction__item-title">ШАГ 7:</h4>
+                                    <a class="instruction__item-link" href="#">
+                                        <img class="instruction__item-img" src="img/recipe/stepbystep/7.jpg" alt="img">
+                                    </a>
+                                    <p class="instruction__item-text">Сверху смажьте тесто кетчупом и посыпьте приправами. Если вы захотите дополнительно положить помидоры, то предварительно извлеките из них
+                                    семечки вместе с сочной частью, чтобы тесто не промокло.
+                                    </p>
+                                </li>
+                            
+                                <li class="instruction__item">
+                                    <h4 class="instruction__item-title">ШАГ 8:</h4>
+                                    <a class="instruction__item-link" href="#">
+                                        <img class="instruction__item-img" src="img/recipe/stepbystep/8.jpg" alt="img">
+                                    </a>
+                                    <p class="instruction__item-text">Выложите на тесто сосиски.
+                                    </p>
+                                </li>
+                            
+                                <li class="instruction__item">
+                                    <h4 class="instruction__item-title">ШАГ 9:</h4>
+                                    <a class="instruction__item-link" href="#">
+                                        <img class="instruction__item-img" src="img/recipe/stepbystep/9.jpg" alt="img">
+                                    </a>
+                                    <p class="instruction__item-text">Сверху обильно посыпьте заготовку для пиццы твердым сыром.
+                                    </p>
+                                </li>
+                            
+                                <li class="instruction__item">
+                                    <h4 class="instruction__item-title">ШАГ 10:</h4>
+                                    <a class="instruction__item-link" href="#">
+                                        <img class="instruction__item-img" src="img/recipe/stepbystep/10.jpg" alt="img">
+                                    </a>
+                                    <p class="instruction__item-text">Накройте сковороду крышкой и готовьте на медленном огне 8 минут. Благодаря тому, что слой теста тонкий, пицца успеет
+                                    хорошо пропечься, сыр расплавится и блюдо будет полностью готово к употреблению.
+                                    </p>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                
+                    <div class="sidebar">
+                        <div class="survey">
+                            <h1 class="survey__descr">Опрос</h1>
+                            <div class="survey__title">Как часто вы едите мясо?</div>
+                            <div class="survey__lables">
+                            
+                                <label class="survey__label">Каждый день на обед и ужин
+                                    <input class="survey__item" type="radio" name="dva">
+                                    <span class="checkmark"></span>
+                                </label>
+                            
+                                <label class="survey__label">Каждый день на обед
+                                    <input class="survey__item" type="radio" name="dva">
+                                    <span class="checkmark"></span>
+                                </label>
+                            
+                                <label class="survey__label">Каждый день на ужин
+                                    <input class="survey__item" type="radio" name="dva" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                            
+                                <label class="survey__label">3 раза в неделю
+                                    <input class="survey__item" type="radio" name="dva">
+                                    <span class="checkmark"></span>
+                                </label>
+                            
+                                <label class="survey__label">1 раз в неделю
+                                    <input class="survey__item" type="radio" name="dva">
+                                    <span class="checkmark"></span>
+                                </label>
+                            
+                                <label class="survey__label">Я не ем мясо
+                                    <input class="survey__item" type="radio" name="dva">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <button class="survey__btn btn">Ответить</button>
+                            </div>
+                        </div>
+                    
+                        <a class="promotion" href="#">
+                            <img class="promotion-img" src="img/promotion.gif" alt="img">
+                        </a>
+                    </div>    
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__info">
+                            <h6 class="footer__info-title">Контакты</h6>
+                            <a class="info-email" href="mailto:ouremailaddress@email.com">ouremailaddress@email.com</a>
+                            <p class="footer__info-text">Подписывайтесь на рассылку рецептов</p>
+
+                            <form class="footer__form">
+                                <input class="footer__form-input" type="email" placeholder="Адрес электронной почты">
+                                <button class="footer__form-button btn" type="submit">Отправить</button>
+                            </form>
+                        </div>
+                        <ul class="footer__social-list">
+                            <li class="footer__social-item">
+                                <a class="footer__social-link footer__social-link--facebook" href="#">Facebook</a>
+                            </li>
+
+                            <li class="footer__social-item">
+                                <a class="footer__social-link footer__social-link--instagram" href="#">Instagram</a>
+                            </li>
+
+                            <li class="footer__social-item">
+                                <a class="footer__social-link footer__social-link--pinterest" href="#">Pinterest</a>
+                            </li>
+
+                            <li class="footer__social-item">
+                                <a class="footer__social-link footer__social-link--whatsapp" href="#">WhatsApp</a>
+                            </li>
+
+                            <li class="footer__social-item">
+                                <a class="footer__social-link footer__social-link--youtube" href="#">YouTube</a>
+                            </li>
+                        </ul>
+                        <nav class="footer__menu">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="#">Полезные советы</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="#">О компании</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="#">Пользовательское соглашение</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="#">FAQ</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="container">
+                    <p>© ООО «Вкуснутсо», 2021. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="js/main.min.js"></script>
+</body>
+</html>
